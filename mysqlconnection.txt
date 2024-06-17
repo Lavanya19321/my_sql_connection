@@ -1,0 +1,52 @@
+1. Download MySql installer by using below url
+ https://dev.mysql.com/downloads/installer/
+ 2. once u click on above url it will ask u to create a oracle account create
+ it by giving some random details
+ 3. after that log in into that and download with default settings
+ 4. while installing it will install the following packages
+ 1. MySQL workbench
+ 2. MySQL commandline client
+ 3. MYSQL installer
+ 4. MySql notifier
+ 5. mysql-installer-web-community
+ 5. After successfull installations search for mysql and click on
+ mysql commandline client
+ use 6th step
+
+HOW TO CONNECT MY SQL?
+1.install pymysql
+2.install pysql-connector-python
+3.settings.py
+  ==>import pymysql
+     pymysql.version_info=(1,5,6,"final",0)
+     pymysql.install_as_MySQLdb()
+  ==>register the app
+  ==>DATABASES = {
+ 'default': {
+ 'ENGINE': 'django.db.backends.mysql',
+ 'NAME': 'name of the database u have created',
+ 'USER':'root',
+ 'PASSWORD':'root',
+ 'HOST':'localhost',
+ 'PORT':3306,
+ }
+ }
+4.create models
+5.migrate
+6.before runserver
+====>mysql commandline client
+     mysql commandline client
+      6. it will ask u to enter password 
+          root   (is the password)
+      7. syntax for creating database
+          create database databasename;
+      8. in order to use that created database by using below command
+           use databasename;
+      9.syntax to see the tables of Database
+          show tables;
+      10. syntax to retrieve the data 
+           select * from Relationname;
+after this runserver it will run successfull
+
+
+
